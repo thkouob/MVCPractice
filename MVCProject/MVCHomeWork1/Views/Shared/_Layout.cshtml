@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Bootstrap &middot; The world's most popular mobile-first and responsive front-end framework.
+    </title>
+
+    @RenderSection("Head", false)
+    @Styles.Render("~/dist/css", "~/assets/css")
+</head>
+<body class="bs-docs-home">
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+        @RenderSection("Header", false)
+    </header>
+
+
+    <!-- Page content of course! -->
+
+    @RenderBody()
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="bs-docs-footer" role="contentinfo">
+       @RenderSection("Footer", false)
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+    @Scripts.Render("~/dist/js", "~/assets/css")
+    @RenderSection("Script", false)
+
+</body>
+</html>
